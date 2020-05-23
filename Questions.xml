@@ -4,7 +4,7 @@
     <text><![CDATA[
     $a = 1 
     $a = write-host 2
-]]></title>
+]]></text>
     <answers>
         <answer>Переменная `$a будет содержать 1<answer/>
         <answer>Переменная `$a будет содержать 2<answer/>
@@ -18,7 +18,7 @@
     $a = '1'
     $a = $a + 2
 ]]>
-    </title>
+    </text>
     <answers>
         <answer>Переменная `$a будет `$null<answer/>
         <answer>Переменная `$a будет содержать 2<answer/>
@@ -33,7 +33,7 @@
     $b = write-host 2
     $a
     $b
-]]></title>
+]]></text>
     <answers>
         <answer>Вывод в консоли будет следующим: 1`r`n2<answer/>
         <answer>Вывод в консоли будет следующим: `$a`r`n`$b<answer/>
@@ -48,7 +48,7 @@
     $b = "$a"
     $a[-2]
     $b[-2]
-]]></title>
+]]></text>
     <answers>
         <answer>`$a[-2] = $null `r`n`$b[-2] = 2<answer/>
         <answer>`$a[-2] = 123 `r`n`$b[-2] = 2<answer/>
