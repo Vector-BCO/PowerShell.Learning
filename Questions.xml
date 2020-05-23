@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+  <question category="Variables And Outputs" lang="ru">
+    <text><![CDATA[
+    $a = 1 
+    $a = write-host 2
+]]></title>
+    <answers>
+        <answer>Переменная `$a будет содержать 1<answer/>
+        <answer>Переменная `$a будет содержать 2<answer/>
+        <answer>Переменная `$a будет `$null<answer/>
+        <answer>Команда вернет ошибку<answer/>
+    </answers>
+    <ca>2</ca>
+  </question>
+  <question category="Variables And Outputs" lang="ru">
+    <text><![CDATA[
+    $a = '1'
+    $a = $a + 2
+]]>
+    </title>
+    <answers>
+        <answer>Переменная `$a будет `$null<answer/>
+        <answer>Переменная `$a будет содержать 2<answer/>
+        <answer>Переменная `$a будет содержать 12<answer/>
+        <answer>Переменная `$a будет содержать 1<answer/>
+    </answers>
+    <ca>2</ca>
+  </question>
+  <question category="Variables And Outputs" lang="ru">
+    <text><![CDATA[
+    $a = write-output 1
+    $b = write-host 2
+    $a
+    $b
+]]></title>
+    <answers>
+        <answer>Вывод в консоли будет следующим: 1`r`n2<answer/>
+        <answer>Вывод в консоли будет следующим: `$a`r`n`$b<answer/>
+        <answer>Вывод в консоли будет следующим: 2`r`n1<answer/>
+        <answer>Вывод в консоли будет следующим: `$b`r`n`$a<answer/>
+    </answers>
+    <ca>1</ca>
+  </question>
+  <question category="Variables And Outputs" lang="ru">
+    <text><![CDATA[
+    $a = 123
+    $b = "$a"
+    $a[-2]
+    $b[-2]
+]]></title>
+    <answers>
+        <answer>`$a[-2] = $null `r`n`$b[-2] = 2<answer/>
+        <answer>`$a[-2] = 123 `r`n`$b[-2] = 2<answer/>
+        <answer>`$a[-2] = 121 `r`n`$b[-2] = 121<answer/>
+        <answer>`$a[-2] = 1 `r`n`$b[-2] = 1<answer/>
+    </answers>
+    <ca>1</ca>
+  </question>
+</questions>
