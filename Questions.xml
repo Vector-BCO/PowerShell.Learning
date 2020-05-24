@@ -17,8 +17,7 @@
     <text><![CDATA[Переменная $a будет содержать:
     $a = '1'
     $a = $a + 2
-]]>
-    </text>
+]]></text>
     <answers>
       <answer>$null</answer>
       <answer>12</answer>
@@ -35,19 +34,19 @@
     $b
 ]]></text>
     <answers>
-        <answer>
+        <answer>>
     1
     2
         </answer>
-        <answer>
+        <answer>>
     $a
     $b
         </answer>
-        <answer>
+        <answer>>
     2
     1
         </answer>
-        <answer>
+        <answer>>
     $b
     $a
         </answer>
@@ -55,15 +54,26 @@
     <ca>2</ca>
   </question>
   <question category="Variables And Outputs" lang="ru">
-    <text><![CDATA[Вопрос:
+    <text><![CDATA[Что появится в консоли при выполнении следующих комманд:
     $a = 123
     $b = "$a"
+    $a[-2]
+    $b[-2]
 ]]></text>
     <answers>
-      <answer>Вывод $a[-2] будет $null, а $b[-2] будет равно 2</answer>
-      <answer>Вывод $a[-2] будет равно 123, а $b[-2] будет равно 2</answer>
-      <answer>Вывод $a[-2] будет равно 121, и $b[-2] будет равно 121</answer>
-      <answer>Вывод $a[-2] будет равно 1 и $b[-2] будет равно 1</answer>
+      <answer>2</answer>
+      <answer>>
+    123
+    2
+      </answer>
+      <answer>>
+    121
+    121
+      </answer>
+      <answer>>
+    1
+    1
+      </answer>
     </answers>
     <ca>0</ca>
   </question>
@@ -135,7 +145,7 @@
       <answer>true</answer>
       <answer>false</answer>
     </answers>
-    <ca>3</ca>
+    <ca>2</ca>
   </question>
   <question category="Regex" lang="ru">
     <text><![CDATA[Какой будет вывод следующей команды:
