@@ -6,10 +6,10 @@
     $a = write-host 2
 ]]></text>
     <answers>
-        <answer>Переменная `$a будет содержать 1<answer/>
-        <answer>Переменная `$a будет содержать 2<answer/>
-        <answer>Переменная `$a будет `$null<answer/>
-        <answer>Команда вернет ошибку<answer/>
+        <answer>Переменная $a будет содержать 1</answer>
+        <answer>Переменная $a будет содержать 2</answer>
+        <answer>Переменная $a будет $null</answer>
+        <answer>Команда вернет ошибку</answer>
     </answers>
     <ca>2</ca>
   </question>
@@ -20,10 +20,10 @@
 ]]>
     </text>
     <answers>
-        <answer>Переменная `$a будет `$null<answer/>
-        <answer>Переменная `$a будет содержать 2<answer/>
-        <answer>Переменная `$a будет содержать 12<answer/>
-        <answer>Переменная `$a будет содержать 1<answer/>
+        <answer>Переменная $a будет $null</answer>
+        <answer>Переменная $a будет содержать 2</answer>
+        <answer>Переменная $a будет содержать 12</answer>
+        <answer>Переменная $a будет содержать 1</answer>
     </answers>
     <ca>2</ca>
   </question>
@@ -35,10 +35,10 @@
     $b
 ]]></text>
     <answers>
-        <answer>Вывод в консоли будет следующим: 1`r`n2<answer/>
-        <answer>Вывод в консоли будет следующим: `$a`r`n`$b<answer/>
-        <answer>Вывод в консоли будет следующим: 2`r`n1<answer/>
-        <answer>Вывод в консоли будет следующим: `$b`r`n`$a<answer/>
+        <answer>Вывод в консоли будет следующим: \n\t1\n\t2</answer>
+        <answer>Вывод в консоли будет следующим: \n\t$a\n\t$b</answer>
+        <answer>Вывод в консоли будет следующим: \n\t2\n\t1</answer>
+        <answer>Вывод в консоли будет следующим: \n\t$b\n\t$a</answer>
     </answers>
     <ca>1</ca>
   </question>
@@ -50,10 +50,10 @@
     $b[-2]
 ]]></text>
     <answers>
-        <answer>`$a[-2] = $null `r`n`$b[-2] = 2<answer/>
-        <answer>`$a[-2] = 123 `r`n`$b[-2] = 2<answer/>
-        <answer>`$a[-2] = 121 `r`n`$b[-2] = 121<answer/>
-        <answer>`$a[-2] = 1 `r`n`$b[-2] = 1<answer/>
+        <answer>$a[-2] = $null \n$b[-2] = 2</answer>
+        <answer>$a[-2] = 123 \n$b[-2] = 2</answer>
+        <answer>$a[-2] = 121 \n$b[-2] = 121</answer>
+        <answer>$a[-2] = 1 \n$b[-2] = 1</answer>
     </answers>
     <ca>1</ca>
   </question>
