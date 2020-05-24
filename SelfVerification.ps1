@@ -1,5 +1,4 @@
 $ErrorActionPreference = 'Stop'
-#$XMLPath = "D:\Git\PowerShell.Learning\Questions.xml"
 
 function Get-Answer {
     param (
@@ -14,7 +13,7 @@ function Get-Answer {
         Write-Host "$question"
         foreach ($answer in $answers){
             $questionNumber++
-            Write-Host "[$questionNumber] $($answer -split '\\n' -replace '\\t',"`t" )"
+            Write-Host "[$questionNumber] $($answer -split '\n' | Where-Object {$_ -notmatch '^\s*$'} | Out-String)"
         }
         $answerNumber = Read-Host -Prompt "Select answer 1 - $questionNumber"
         if ($answerNumber -in @(1..$questionNumber)) {
@@ -28,6 +27,7 @@ function Get-Answer {
         if (! [string]::IsNullOrEmpty($ca)){
             [psobject]@{
                 isAnswerCorrect = $answerNumber -eq $($ca + 1);
+                question = $question;
                 answer = $answers[$answerNumber - 1]
             }
         } else{
@@ -53,6 +53,7 @@ try{
             Get-Answer -Qusetion "Select language from the list" -Answers $languages
         }
         $Questions = $QuestionsXML | Where-Object {$_.lang -eq $SelectedLanguage}
+        $answers = @()
         foreach ($Question in $Questions){
             $ReceivedAnswer = Get-Answer -question $Question.text.'#cdata-section' -answers $Question.Answers.answer -ca $Question.ca
             if ($ReceivedAnswer.isAnswerCorrect){
@@ -60,11 +61,17 @@ try{
             } else {
                 Write-Host "Incorrect answer" -ForegroundColor Red
             }
+            $answers += $ReceivedAnswer
             Start-Sleep -s 2
         }
+
+        $answers = $answers | Foreach-Object {$_ | Select-Object @{n='question'; e={$_.question}}, @{n='answer'; e={$_.answer}}, @{n='IsAnswerCorrect'; e={$_.isAnswerCorrect}}}
+        $correctAnswer = ($($answers | Where-Object {$_.IsAnswerCorrect -eq $true} | Measure-Object).count * 100) / $($answers | Measure-Object).count
+        Write-Host "Correct answers: $correctAnswer%"
+        $answers | Out-GridView
     } else {
-        # ! ToDo add some stub
+        Throw "Questions.xml not be found, place questions.xml from GitHub to the same folder as this script is."
     }
 } Catch {
-    # TODO add error handling
+    Write-Host "[SelfVerification] Script failed with error: $_"
 }

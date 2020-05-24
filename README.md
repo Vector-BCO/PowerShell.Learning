@@ -1,4 +1,3 @@
-# PowerShell.Learning
 # PowerShell Beginner Part 1 (Rus)
 
 ## Дата проведения практикума
