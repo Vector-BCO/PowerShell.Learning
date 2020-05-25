@@ -46,7 +46,7 @@ try{
     } 
 
     if (Test-Path $XMLPath){
-        $QuestionsXML = $([xml](Get-Content $XMLPath)).Questions.question
+        $QuestionsXML = $([xml](Get-Content $XMLPath -Encoding UTF8)).Questions.question
         $languages = $QuestionsXML | Select-Object -ExpandProperty lang -Unique
         $SelectedLanguage = $languages | Select-Object -First 1
         if (($languages | Measure-Object).count -gt 1){
