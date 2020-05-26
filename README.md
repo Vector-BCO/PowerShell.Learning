@@ -16,6 +16,10 @@
     - Windows 7 SP1 или старше
     - PowerShell 5.1  - проверить версию можно при помощи команды $PSVersionTable.PSVersion
     - Visual Studio Code (рекомендовано)
+    
+    Для владельцев семерок и восьмерок, желающих поднять свою версию WMF до 5.1, ссылки на документацию и закачку
+    https://docs.microsoft.com/ru-ru/powershell/scripting/windows-powershell/install/installing-windows-powershell?view=powershell-7 
+    https://www.microsoft.com/en-us/download/details.aspx?id=54616
 
 ## Самостоятельная проверка
     Для самостоятельной проверки входных знаний можно использовать скрипт SelfVerification.ps1
