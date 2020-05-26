@@ -1,0 +1,160 @@
+{
+    "Languages": [
+        {
+            "Language": "ru",
+            "questionCategories": [
+                {
+                    "category":"Variables And Outputs",
+                    "questions":[
+                        {
+                            "question": "Переменная $a будет содержать: \n   $a = 1 \n   $a = write-host 2",
+                            "answers": [
+                                "1",
+                                "2",
+                                "$null",
+                                "Команда вернет ошибку"
+                            ],
+                            "correctAnswer": "FE-9D-4C-19-E5-C4-00-F1-79-4B-75-EB-E9-67-50-B6"
+                        },
+                        {
+                            "question": "Переменная $a будет содержать: \n   $a = '1' \n   $a = $a + 2",
+                            "answers": [
+                                "$null",
+                                "12",
+                                "2",
+                                "1"
+                            ],
+                            "correctAnswer": "39-07-71-93-21-33-D9-72-A1-CC-F7-3D-AD-84-51-3F"
+                        },
+                        {
+                            "question": "Вывод в консоли будет следующим: \n   $a = write-output 1 \n   $b = write-host 2 \n   $a \n   $b",
+                            "answers": [
+                                "> \n   1  \n   2",
+                                "> \n   $a \n   $b",
+                                "> \n   2  \n   1",
+                                "> \n   $b \n   $a"
+                            ],
+                            "correctAnswer": "B6-FE-16-17-AA-0D-91-8D-35-31-E2-39-A5-9B-B1-CF"
+                        },
+                        {
+                            "question": "Что будет содержаться в $variable.GetType() \n   В следующую команду подаем 1 \n   $variable = Read-Host",
+                            "answers": [
+                                "int32",
+                                "bool",
+                                "PSCustomObject",
+                                "string"
+                            ],
+                            "correctAnswer": "E7-77-73-96-22-99-33-71-73-5B-5E-4D-58-93-F5-42"
+                        },
+                        {
+                            "question": "Что появится в консоли при выполнении следующих команд: \n   $a = 123 \n   $b = \"$a\" \n   $a[-2] \n   $b[-2]",
+                            "answers": [
+                                "2",
+                                "> \n   123 \n   2",
+                                "> \n   121  \n   121",
+                                "> \n   1 \n   1"
+                            ],
+                            "correctAnswer": "D6-FF-68-FC-1B-82-1C-8C-C7-33-8E-53-45-AB-AC-B2"
+                        },
+                        {
+                            "question": "Что будет содержаться в $variable.GetType() \n   [int]$variable = $True",
+                            "answers": [
+                                "int32",
+                                "bool",
+                                "PSCustomObject",
+                                "string"
+                            ],
+                            "correctAnswer": "34-BD-3C-C0-C0-4C-56-88-D9-28-B8-C0-E2-4D-6B-D1"
+                        }
+                    ]
+                },
+                {
+                    "category":"Strings",
+                    "questions":[
+                        {
+                            "question": "$FullString будет содержать: \n   $PartialString = \"World\" \n   $FullString = \"Hello $PartialString\"",
+                            "answers": [
+                                "Hello $PartialString",
+                                "Hello World"
+                            ],
+                            "correctAnswer": "67-14-70-7B-6A-F9-13-9E-8B-A2-AB-66-B2-F1-4C-38"
+                        },
+                        {
+                            "question": "$FullString будет содержать: \n   $PartialString = \"World\" \n   $FullString = 'Hello $PartialString'",
+                            "answers": [
+                                "Hello $PartialString",
+                                "Hello World"
+                            ],
+                            "correctAnswer": "42-E0-DC-5B-7E-09-18-2B-D3-41-96-70-7F-6C-DE-94"
+                        }
+                    ]
+                },
+                {
+                    "category":"Regex",
+                    "questions":[
+                        {
+                            "question": "Какой будет вывод следующей команды \n   \"Hello world\" -match 'hell'",
+                            "answers": [
+                                "Hello",
+                                "Hello world",
+                                "true",
+                                "false"
+                            ],
+                            "correctAnswer": "8B-3A-0A-AC-26-29-48-54-B5-EB-BE-31-3C-87-1B-C1"
+                        },
+                        {
+                            "question": "Какой будет вывод следующей команды \n   \"Hello world\" -replace 'lo|wo'",
+                            "answers": [
+                                "Hello world",
+                                "Hel rld",
+                                "true",
+                                "Helwo lorld"
+                            ],
+                            "correctAnswer": "03-93-CD-66-C5-51-E7-D5-62-51-F5-AB-9C-78-D6-5D"
+                        }
+                    ]
+                },
+                {
+                    "category":"Logical",
+                    "questions":[
+                        {
+                            "question": "Какой будет вывод следующей команды: \n   0 -gt $true",
+                            "answers": [
+                                "0",
+                                "false",
+                                "1",
+                                "true"
+                            ],
+                            "correctAnswer": "00-93-90-B2-37-98-2B-02-0F-40-7D-8D-9E-4E-83-66"
+                        },
+                        {
+                            "question": "Какой будет вывод следующей команды: \n   5 -in @(1..10)",
+                            "answers": [
+                                "0",
+                                "false",
+                                "1",
+                                "true"
+                            ],
+                            "correctAnswer": "1E-24-FE-F1-16-EC-D0-E7-86-63-A3-C5-32-9E-22-D9"
+                        }
+                    ]
+                },
+                {
+                    "category":"Functions",
+                    "questions":[
+                        {
+                            "question": "Что появится на экране при выполнeнии следующей команды: \n   function new-function { \n      param($string) \n     \"~~ $string ~~\" \n   } \n   $string = 'ABC' \n   new-function \"DEF\"",
+                            "answers": [
+                                "ABC",
+                                "DEF",
+                                "~~ DEF ~~",
+                                "$string"
+                            ],
+                            "correctAnswer": "12-EC-10-FA-CF-4B-C5-F7-3D-B2-88-D7-22-C8-8B-C7"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
