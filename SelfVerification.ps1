@@ -15,6 +15,7 @@ function Get-Answer {
     param (
         [string]$question,
         [string[]]$answers,
+        [AllowEmptyString()]
         [string]$correctAnswer
     )
     $answerFound = $false
@@ -43,7 +44,11 @@ function Get-Answer {
                 answer = $answers[$answerNumber - 1]
             }
         } else{
-            $answers[$answerNumber - 1]
+            [psobject]@{
+                isAnswerCorrect = $(Get-MDHash -Question $question -Answer $answers[$answerNumber - 1]);
+                question = $question;
+                answer = $answers[$answerNumber - 1]
+            }
         }
     }
 }
@@ -62,7 +67,8 @@ try{
         $languages = $QuestionsWithLanguages | Select-Object -ExpandProperty Language -Unique
         $SelectedLanguage = $languages | Select-Object -First 1
         if (($languages | Measure-Object).count -gt 1){
-            Get-Answer -Qusetion "Select language from the list" -Answers $languages
+            $ReceivedAnswer = Get-Answer -question "Select language from the list" -answers $languages
+            $SelectedLanguage = $ReceivedAnswer.answer
         }
         $QuestionsWithLanguages = $QuestionsWithLanguages | Where-Object {$_.Language -eq $SelectedLanguage} | Select-Object -ExpandProperty questionCategories
         $answers = @()
@@ -70,8 +76,8 @@ try{
             $CategoryName = $Category.category
             Write-Host "Category started: '$CategoryName'"
             foreach ($question in $Category.questions){
-                $ReceivedAnswer = Get-Answer -question $Question.question -answers $Question.answers -correctAnswer $Question.correctAnswer
-                if ($ReceivedAnswer.isAnswerCorrect){
+                $ReceivedAnswer = Get-Answer -question $Question.question -answers $Question.answers -correctAnswer "$($Question.correctAnswer)"
+                if ($ReceivedAnswer.isAnswerCorrect -eq $true){
                     Write-Host "Correct answer" -ForegroundColor Green
                 } else {
                     Write-Host "Incorrect answer" -ForegroundColor Red

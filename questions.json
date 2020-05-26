@@ -27,44 +27,44 @@
                             "correctAnswer": "39-07-71-93-21-33-D9-72-A1-CC-F7-3D-AD-84-51-3F"
                         },
                         {
-                            "question": "Вывод в консоли будет следующим: \n   $a = write-output 1 \n   $b = write-host 2 \n   $a \n   $b",
+                            "question": "При выполнении следующего кода: \n   $a = write-output 1 \n   $b = write-host 2 \n   $a \n   $b",
                             "answers": [
-                                "> \n   1  \n   2",
-                                "> \n   $a \n   $b",
-                                "> \n   2  \n   1",
-                                "> \n   $b \n   $a"
+                                "Вывод в консоли будет следующим: \n   1  \n   2",
+                                "Вывод в консоли будет следующим: \n   $a \n   $b",
+                                "Вывод в консоли будет следующим: \n   2  \n   1",
+                                "Вывод в консоли будет следующим: \n   $b \n   $a"
                             ],
-                            "correctAnswer": "B6-FE-16-17-AA-0D-91-8D-35-31-E2-39-A5-9B-B1-CF"
+                            "correctAnswer": "B8-AF-11-F5-01-42-41-FF-64-04-35-D7-97-ED-C4-75"
                         },
                         {
-                            "question": "Что будет содержаться в $variable.GetType() \n   В следующую команду подаем 1 \n   $variable = Read-Host",
+                            "question": "При вводе 1 в следующую команду \n   $variable = Read-Host \n Тип переменной будет следующим:",
                             "answers": [
                                 "int32",
                                 "bool",
                                 "PSCustomObject",
                                 "string"
                             ],
-                            "correctAnswer": "E7-77-73-96-22-99-33-71-73-5B-5E-4D-58-93-F5-42"
+                            "correctAnswer": "21-CA-6A-6D-3F-FC-82-12-41-3A-D5-05-CB-81-91-2A"
                         },
                         {
-                            "question": "Что появится в консоли при выполнении следующих команд: \n   $a = 123 \n   $b = \"$a\" \n   $a[-2] \n   $b[-2]",
+                            "question": "При выполнении следующих команд: \n   $a = 123 \n   $b = \"$a\" \n   $a[-2] \n   $b[-2]",
                             "answers": [
-                                "2",
-                                "> \n   123 \n   2",
-                                "> \n   121  \n   121",
-                                "> \n   1 \n   1"
+                                "Вывод в консоли будет следующим: \n   2",
+                                "Вывод в консоли будет следующим: \n   123 \n   2",
+                                "Вывод в консоли будет следующим: \n   121  \n   121",
+                                "Вывод в консоли будет следующим: \n   1 \n   1"
                             ],
-                            "correctAnswer": "D6-FF-68-FC-1B-82-1C-8C-C7-33-8E-53-45-AB-AC-B2"
+                            "correctAnswer": "6A-72-09-B6-F5-E2-93-55-74-95-0D-D2-14-83-CA-D1"
                         },
                         {
-                            "question": "Что будет содержаться в $variable.GetType() \n   [int]$variable = $True",
+                            "question": "При выполнении следующего фрагмента \n   [int]$variable = $True \n   $variable.GetType() \n Тип переменной будет следующим:",
                             "answers": [
                                 "int32",
                                 "bool",
                                 "PSCustomObject",
                                 "string"
                             ],
-                            "correctAnswer": "34-BD-3C-C0-C0-4C-56-88-D9-28-B8-C0-E2-4D-6B-D1"
+                            "correctAnswer": "F9-7B-37-71-B4-E0-45-C9-46-88-79-80-D1-07-61-C1"
                         }
                     ]
                 },
@@ -72,20 +72,20 @@
                     "category":"Strings",
                     "questions":[
                         {
-                            "question": "$FullString будет содержать: \n   $PartialString = \"World\" \n   $FullString = \"Hello $PartialString\"",
+                            "question": "Что будет содержать переменная $FullString: \n   $PartialString = \"World\" \n   $FullString = \"Hello $PartialString\"",
                             "answers": [
                                 "Hello $PartialString",
                                 "Hello World"
                             ],
-                            "correctAnswer": "67-14-70-7B-6A-F9-13-9E-8B-A2-AB-66-B2-F1-4C-38"
+                            "correctAnswer": "FB-67-67-40-84-4A-38-5F-C4-62-1C-83-19-A9-F3-E6"
                         },
                         {
-                            "question": "$FullString будет содержать: \n   $PartialString = \"World\" \n   $FullString = 'Hello $PartialString'",
+                            "question": "$FullString будет содержать: \n   $PartialString = 'World' \n   $FullString = 'Hello $PartialString'",
                             "answers": [
                                 "Hello $PartialString",
                                 "Hello World"
                             ],
-                            "correctAnswer": "42-E0-DC-5B-7E-09-18-2B-D3-41-96-70-7F-6C-DE-94"
+                            "correctAnswer": "A0-FA-8B-AE-95-0F-F3-58-42-4F-F8-D7-C3-B4-90-D9"
                         }
                     ]
                 },
@@ -125,7 +125,7 @@
                                 "1",
                                 "true"
                             ],
-                            "correctAnswer": "00-93-90-B2-37-98-2B-02-0F-40-7D-8D-9E-4E-83-66"
+                            "correctAnswer": "F7-5F-F6-F7-95-96-0F-CA-A8-B4-71-2B-2E-1A-2A-B9"
                         },
                         {
                             "question": "Какой будет вывод следующей команды: \n   5 -in @(1..10)",
@@ -151,6 +151,51 @@
                                 "$string"
                             ],
                             "correctAnswer": "12-EC-10-FA-CF-4B-C5-F7-3D-B2-88-D7-22-C8-8B-C7"
+                        },
+                        {
+                            "question": "При выполнении следующего фрагмента кода \n $ErrorActionPreference = 'Stop' \n try { \n     throw 'Custom Error Message' \n     $a = 'ABCD' \n } catch { \n    $b = $_ \n }",
+                            "answers": [
+                                "Переменная $a будет пустая ($null) \n    Переменная $b будет содержать ошибку ('Custom Error Message') ",
+                                "Переменная $a будет содержать строку ('ABCD') \n    Переменная $b будет пустая ($null)",
+                                "Обе переменные $a и $b будут содержать строку ('ABCD')",
+                                "Обе переменные $a и $b будут пустыми ($null)"
+                            ],
+                            "correctAnswer": "DC-03-DD-6D-9B-DF-73-BA-B4-DB-36-72-82-83-B1-5D"
+                        }
+                    ]
+                },
+                {
+                    "category":"Files",
+                    "questions":[
+                        {
+                            "question": "Что будет отображено в консоли при выполнении следующего фрагмента: \n   $TestFile = \"$ENV:USERPROFILE\\Documents\\test.txt\" \n   New-Item -Force -ItemType File -Path $TestFile \n   1 | Out-File $TestFile \n   2 | Out-File $TestFile \n   Get-Content $TestFile",
+                            "answers": [
+                                "12",
+                                "1",
+                                "2",
+                                "1 \n    2"
+                            ],
+                            "correctAnswer": "1C-A0-88-CA-27-84-3E-42-B3-C2-0D-2D-F2-AB-A4-79"
+                        },
+                        {
+                            "question": "Что будет отображено в консоли при выполнении следующего фрагмента: \n   $TestFile = \"$ENV:USERPROFILE\\Documents\\test.txt\" \n   New-Item -Force -ItemType File -Path $TestFile \n   1 | Out-File $TestFile \n   2 | Out-File $TestFile \n   $Content = Get-Content $TestFile | Select -First 1 \n   $Content + 3",
+                            "answers": [
+                                "13",
+                                "4",
+                                "23",
+                                "5"
+                            ],
+                            "correctAnswer": "D7-4E-04-52-A4-7E-2E-67-D7-2F-A4-3D-C5-39-C5-B0"
+                        },
+                        {
+                            "question": "Какие варианты возможно получить в консоли при выполнении следующего фрагмента: \n $randomValue = Get-Random -InputObject @($true, $false) \n if ($randomValue){ \n     1 \n } elseif ($randomValue -eq $false){ \n     2 \n } else { \n     3 \n }",
+                            "answers": [
+                                "1, 2, 3",
+                                "1 и 2",
+                                "2 и 3",
+                                "3"
+                            ],
+                            "correctAnswer": "AA-19-39-FC-AB-BE-28-45-5D-4A-48-5E-C4-90-27-0C"
                         }
                     ]
                 }
