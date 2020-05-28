@@ -93,7 +93,7 @@ try{
         Write-Host "Correct answers: $correctAnswerPercentage%"
         $answers | Out-GridView
     } else {
-        Throw "Questions.xml not be found, place questions.xml from GitHub to the same folder as this script is."
+        Throw "Questions.json not be found, place questions.json from GitHub to the same folder as this script is."
     }
 } Catch {
     Write-Host "[SelfVerification] Script failed with error: $_"
