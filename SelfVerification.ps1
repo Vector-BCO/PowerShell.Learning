@@ -23,7 +23,7 @@ function Get-Answer {
         Clear-Host
         $questionNumber = 0
         Write-Host "$question"
-        Write-Host '-----------------------------'
+        Write-Host '--------------------------------------'
         foreach ($answer in $answers){
             $questionNumber++
             Write-Host "[$questionNumber] $($answer -split '\n' | Where-Object {$_ -notmatch '^\s*$'} | Out-String)"
@@ -83,7 +83,7 @@ try{
                     Write-Host "Incorrect answer" -ForegroundColor Red
                 }
                 $answers += $ReceivedAnswer
-                Start-Sleep -s 2
+                Start-Sleep -s 1
             }
         }
 

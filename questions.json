@@ -136,6 +136,16 @@
                                 "true"
                             ],
                             "correctAnswer": "1E-24-FE-F1-16-EC-D0-E7-86-63-A3-C5-32-9E-22-D9"
+                        },
+                        {
+                            "question": "Что будет делать следующая команда \n   [Int](Get-Date).DayOfWeek -in @(6..9)",
+                            "answers": [
+                                "Команда вернет дату 1989-07-06",
+                                "Всегда результат будет идентичным и равным False",
+                                "Если в момент выполнения команды будет 6, 7, 8 или 9 число то команда вернет True, в другом случае будет False",
+                                "Команда вернет True в субботу и воскресенье, и False в остальные дни недели"
+                            ],
+                            "correctAnswer": "1B-98-7B-CB-18-2D-36-BB-B7-98-92-E9-A1-76-13-DC"
                         }
                     ]
                 },
@@ -161,6 +171,27 @@
                                 "Обе переменные $a и $b будут пустыми ($null)"
                             ],
                             "correctAnswer": "DC-03-DD-6D-9B-DF-73-BA-B4-DB-36-72-82-83-B1-5D"
+                        },
+                        {
+                            "question": "Что появится в консоли при выполнении следующего фрагмента кода \n foreach ($i in @(1..3)){if($i -eq 2){continue}else{$i}}",
+                            "answers": [
+                                "1",
+                                "1 \n    2",
+                                "1 \n    2 \n    3",
+                                "1 \n    3"
+                            ],
+                            "correctAnswer": "40-D0-37-94-44-E5-BB-28-34-3A-2E-1E-AD-E1-39-05"
+                        }
+                        ,
+                        {
+                            "question": "Что будет содержать переменная $unsecureString при выполнении следующего фрагмента кода \n   $SecureString = ConvertTo-SecureString -String 'Password' -Force -AsPlainText \n   $unsecureString = ConvertFrom-SecureString $SecureString",
+                            "answers": [
+                                "Расшифрованную строку равную 'Password'",
+                                "Объект PSCredential, который можно использовать в Invoke-Command и Enter-PSSession ",
+                                "Пароль который можно будет использовать для доступа к ПК на котором пароль был сгенерирован",
+                                "Шифрованную последовательность которую можно сконвертировать в SecureString"
+                            ],
+                            "correctAnswer": "95-E8-2E-11-4E-D4-AC-CA-8A-B8-45-12-11-A7-2B-84"
                         }
                     ]
                 },
@@ -168,24 +199,24 @@
                     "category":"Files",
                     "questions":[
                         {
-                            "question": "Что будет отображено в консоли при выполнении следующего фрагмента: \n   $TestFile = \"$ENV:USERPROFILE\\Documents\\test.txt\" \n   New-Item -Force -ItemType File -Path $TestFile \n   1 | Out-File $TestFile \n   2 | Out-File $TestFile \n   Get-Content $TestFile",
+                            "question": "Что будет отображено в консоли при выполнении следующего фрагмента: \n   $TestFile = New-TemporaryFile \n   New-Item -Force -ItemType File -Path $TestFile \n   1 | Out-File $TestFile \n   2 | Out-File $TestFile \n   Get-Content $TestFile",
                             "answers": [
                                 "12",
                                 "1",
                                 "2",
                                 "1 \n    2"
                             ],
-                            "correctAnswer": "1C-A0-88-CA-27-84-3E-42-B3-C2-0D-2D-F2-AB-A4-79"
+                            "correctAnswer": "58-58-AC-E8-33-AB-FC-6B-F1-9D-41-5F-F6-99-FC-4B"
                         },
                         {
-                            "question": "Что будет отображено в консоли при выполнении следующего фрагмента: \n   $TestFile = \"$ENV:USERPROFILE\\Documents\\test.txt\" \n   New-Item -Force -ItemType File -Path $TestFile \n   1 | Out-File $TestFile \n   2 | Out-File $TestFile \n   $Content = Get-Content $TestFile | Select -First 1 \n   $Content + 3",
+                            "question": "Что будет отображено в консоли при выполнении следующего фрагмента: \n   $TestFile = New-TemporaryFile \n   New-Item -Force -ItemType File -Path $TestFile \n   1 | Out-File $TestFile \n   2 | Out-File $TestFile \n   $Content = Get-Content $TestFile | Select -First 1 \n   $Content + 3",
                             "answers": [
                                 "13",
                                 "4",
                                 "23",
                                 "5"
                             ],
-                            "correctAnswer": "D7-4E-04-52-A4-7E-2E-67-D7-2F-A4-3D-C5-39-C5-B0"
+                            "correctAnswer": "D6-1F-F1-1C-A9-B6-B4-5C-26-D2-1B-99-82-1C-04-8B"
                         },
                         {
                             "question": "Какие варианты возможно получить в консоли при выполнении следующего фрагмента: \n $randomValue = Get-Random -InputObject @($true, $false) \n if ($randomValue){ \n     1 \n } elseif ($randomValue -eq $false){ \n     2 \n } else { \n     3 \n }",
@@ -196,6 +227,21 @@
                                 "3"
                             ],
                             "correctAnswer": "AA-19-39-FC-AB-BE-28-45-5D-4A-48-5E-C4-90-27-0C"
+                        }
+                    ]
+                },
+                {
+                    "category":"Optimization",
+                    "questions":[
+                        {
+                            "question": "Какой будет результат выполнения следующего фрагмента кода: \n   $FunctionAResult = Measure-Command {1..1000000 | foreach{$_}} \n   $FunctionBResult = Measure-Command {$i = 0 ; 1..1000000 | foreach{$a = $i+$_ ; Write-Output $a}}  \n   $FunctionAResult -ge $FunctionBResult \n   $FunctionAResult -eq $FunctionBResult \n   $FunctionAResult -le $FunctionBResult",
+                            "answers": [
+                                "False \n    False \n    True",
+                                "True \n    True \n    True",
+                                "True \n    True \n    False",
+                                "Error"
+                            ],
+                            "correctAnswer": "4E-92-E8-1C-1E-F1-86-D4-DD-A1-35-C8-0C-46-1F-9A"
                         }
                     ]
                 }
