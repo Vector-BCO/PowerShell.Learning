@@ -1,3 +1,5 @@
+[К списку тем](https://github.com/Vector-BCO/PowerShell.Learning/wiki)
+
 # 1c Config
 ## Цель
 Необходимо получить список DBFriendlyName, BDName и ServerName и подготовить новый конфигурационный файл
