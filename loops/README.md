@@ -25,7 +25,7 @@ Process Notepad.exe started after 13 seconds delay
 Process Notepad.exe stopped after 106 seconds delay
 Process Notepad.exe started after 25 seconds delay
 Process Notepad.exe stopped after 8 seconds delay
-Process Notepad.exe not started in 180 seconds 
+Process Notepad.exe not started in 120 seconds
 Script finished
 ```
 
