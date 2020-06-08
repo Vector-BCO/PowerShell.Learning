@@ -2,6 +2,7 @@
 
 # Установка ПО на удаленные ПК
 Необходимо установить [Notepad++](https://notepad-plus-plus.org/downloads/) на те ПК из [списка](./computers.csv) где он не установлен
+
 Установка должна производиться в [Silent](https://community.notepad-plus-plus.org/topic/17824/how-to-silent-install-npp-7-7-mdt-installation) режиме
 
 После установки должны получить отчет следующего вида:
