@@ -8,10 +8,19 @@
 ```PowerShell
 ComputerName  PCReady  SoftwareStatus
 ------------  -------  --------------
-PC1              True  PreInstalled
-PC2              True  Installed
+PC1              True  Installed
+PC2              True  Nothing todo
 PC3             False  Unknown
 ```
 
 # Проверка настроек DNS
 На ПК из [списка](./computers.csv) необходимо проверить настройки DNS на всех интерфейсах и заменить адрес 8.8.4.4 на адрес 8.8.8.8 
+
+Вывод команды должен быть приблизительно таким
+```PowerShell
+ComputerName  PCReady  SoftwareStatus
+------------  -------  --------------
+PC1              True  DNS Modified
+PC2              True  Nothing todo
+PC3             False  Unknown
+```
