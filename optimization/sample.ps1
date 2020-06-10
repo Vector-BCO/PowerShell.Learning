@@ -23,7 +23,7 @@ Measure-Command {
 }
 
 
-# Пример №3 - ~6 hours
+# Пример №3 - 8 hours 57 min 43 sec 284 msec
 Measure-Command {
     Write-Host "[$(Get-Date)] Cчитаем от 0 до 1000000 и дозаписываем результат каждой операции в файл" -ForegroundColor Magenta
     $iteration = 0
