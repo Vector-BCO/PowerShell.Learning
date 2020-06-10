@@ -38,7 +38,7 @@ Measure-Command {
 }
 
 
-# Пример №4 - > 80 hours
+# Пример №4 - > 130 hours
 Measure-Command {
     Write-Host "[$(Get-Date)] Значения счетчика считывается из файла, к нему добавляется 1 после чего оно записывается в файл (1м раз)"  -ForegroundColor Magenta
     $iteration = 0
