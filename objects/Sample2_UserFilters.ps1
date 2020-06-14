@@ -8,10 +8,25 @@ $OKUsers | Where-Object {$_.Age -ge 63}
 Write-Host "$($OKUsers.Count * 100 / $AllUsers.Count)% users successfully passed verification"
 
 # Birthday next week
-$OKUsers | Select-Object *, @{n= 'TmpDate'; e={[datetime]($_.DayOfBirth -replace '\d{4}',(Get-Date).Year)}} | Where-Object {($_.TmpDate -ge (Get-Date)) -and ($_.TmpDate -le (Get-Date).AddDays(7))}
+$OKUsers | Where-Object {
+    if ($_.DayOfBirth){
+        $TmpDate = [datetime]($_.DayOfBirth -replace '\d{4}',(Get-Date).Year)
+        ($TmpDate -ge (Get-Date)) -and ($TmpDate -le (Get-Date).AddDays(7))
+    }
+}
 
 # Birthday next 2 weeks (exclude previous group)
-$OKUsers | Select-Object *, @{n= 'TmpDate'; e={[datetime]($_.DayOfBirth -replace '\d{4}',(Get-Date).Year)}} | Where-Object {($_.TmpDate -ge (Get-Date).AddDays(7)) -and ($_.TmpDate -le (Get-Date).AddDays(14))}
+$OKUsers | Where-Object {
+    if ($_.DayOfBirth){
+        $TmpDate = [datetime]($_.DayOfBirth -replace '\d{4}',(Get-Date).Year)
+        ($TmpDate -ge (Get-Date).AddDays(7)) -and ($TmpDate -le (Get-Date).AddDays(14))
+    }
+}
 
 # Birthday next month (exclude previous groups)
-$OKUsers | Select-Object *, @{n= 'TmpDate'; e={[datetime]($_.DayOfBirth -replace '\d{4}',(Get-Date).Year)}} | Where-Object {($_.TmpDate -ge (Get-Date).AddDays(14)) -and ($_.TmpDate -le (Get-Date).AddMonths(1))}
+$OKUsers | Where-Object {
+    if ($_.DayOfBirth){
+        $TmpDate = [datetime]($_.DayOfBirth -replace '\d{4}',(Get-Date).Year)
+        ($TmpDate -ge (Get-Date).AddDays(14)) -and ($TmpDate -le (Get-Date).AddMonths(1))
+    }
+}
