@@ -50,7 +50,7 @@ ForEach ($DB in $DBs) {
             $DBNameID = [int]($Matches[0])
             $ServerName = $DB.ServerName -replace '1','3'
             # '^(.+)$' - full string
-            # $1 - saved result for (.+) block
+            # $1 - saved result for first (.+) block
             $DBName = $DB.DBName -replace '^(.+)$','Test_$1' -replace '\d+$',$($DBNameID + 11)
             Write-Host "DB will be reconfigured" -ForegroundColor Yellow
             Write-Host "$($DB.ServerName) => $ServerName" -ForegroundColor Yellow

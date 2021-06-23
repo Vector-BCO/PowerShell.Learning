@@ -1,11 +1,11 @@
-[К списку тем](https://github.com/Vector-BCO/PowerShell.Learning/wiki)
+[Goto Topics](https://github.com/Vector-BCO/PowerShell.Learning/wiki)
 
-# Установка ПО на удаленные ПК
-Необходимо установить [Notepad++](https://notepad-plus-plus.org/downloads/) на те ПК из [списка](./computers.csv) где он не установлен
+# Task 1: Software installation
+1 [Notepad++](https://notepad-plus-plus.org/downloads/) should be installed onto Computers from the [list](./computers.csv) where not installed yet.
 
-Установка должна производиться в [Silent](https://community.notepad-plus-plus.org/topic/17824/how-to-silent-install-npp-7-7-mdt-installation) режиме
+2 Install process should be performed in [Silent](https://community.notepad-plus-plus.org/topic/17824/how-to-silent-install-npp-7-7-mdt-installation) mode.
 
-После установки должны получить отчет следующего вида:
+3 Report should be received (like below):
 ```PowerShell
 ComputerName  PCReady  SoftwareStatus
 ------------  -------  --------------
@@ -14,10 +14,10 @@ PC2              True  Nothing todo
 PC3             False  Unknown
 ```
 
-# Проверка настроек DNS
-На ПК из [списка](./computers.csv) необходимо проверить настройки DNS на всех интерфейсах и заменить адрес 8.8.4.4 на адрес 8.8.8.8 
+# Task 2: DNS settings verification
+1 Verify DNS settings for all interfaces on each Computer from the [list](./computers.csv) and change '8.8.4.4' DNS record to new one '8.8.8.8'
 
-Вывод команды должен быть приблизительно таким
+2 Report should be received (like below):
 ```PowerShell
 ComputerName  PCReady  SoftwareStatus
 ------------  -------  --------------
