@@ -1,4 +1,4 @@
-[К списку тем](https://github.com/Vector-BCO/PowerShell.Learning/wiki)
+[Goto Topics](https://github.com/Vector-BCO/PowerShell.Learning/wiki)
 
 # Проверка пользователей перед импортом в АД
     Необходимо в списке пользователей из users.csv проверить необходимые параметры,

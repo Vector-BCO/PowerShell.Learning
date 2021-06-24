@@ -1,4 +1,4 @@
-[К списку тем](https://github.com/Vector-BCO/PowerShell.Learning/wiki)
+[Goto Topics](https://github.com/Vector-BCO/PowerShell.Learning/wiki)
 
 # Проверка пароля при повторном вводе
 Необходимо создать фрагмент кода который будет проверять пароль введенный как SecureString

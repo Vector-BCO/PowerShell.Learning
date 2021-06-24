@@ -1,48 +1,51 @@
-[К списку тем](https://github.com/Vector-BCO/PowerShell.Learning/wiki)
+[Goto Topics](https://github.com/Vector-BCO/PowerShell.Learning/wiki)
 
-# 1c Config
-## Цель
-Необходимо получить список DBFriendlyName, BDName и ServerName и подготовить новый конфигурационный файл
-  - DBFriendlyName записан в квадратных скобках на отдельной строке. 
-    * Пример: \[1C База знаний\], \[СамаяВажнаяБаза\]
-  - Имена серверов (ServerName) состоят из имени сервера и индекса (без пробелов, минусы и подчеркивания возможны). 
-    * Пример: Server1, DB-Server2, 1c_Server3 итд.
-  - Имена баз (BDName) состоят из названия базы и двухциферного индекса (без пробелов, минусы и подчеркивания возможны). 
-    * Пример: DB10, 1c_Database12, DataBase-23 итд.
+# 1C Program Config
+## Main goal
+Receive all DBFriendlyName, DBName and ServerName and prepare new config file with next requirements:
+  - DBFriendlyName stores in square brackets 
+    * Example: \[1C Powershell Learning\], \[ExtraImportantDB\]
+  - ServerName parameter include exact server  name with index at the end (without spaces, minuses "-" and underscores "_" is allowed)
+    * Example: Server1, DB-Server2, 1c_Server3 etc.
+  - Database names (DBName) contain exact DB name with 2 digit indexes at the end (without spaces, minuses "-" and underscores "_" is allowed)
+    * Example: DB10, 1c_Database12, DataBase-23 etc.
 
-## Условия нового конфигурационного файла
-  - DBFriendlyName - не меняется
-  - Порядок баз не меняется
-  - Базу с сервера с индексом 1 переносятся на сервер с индексом 3
-  - К названию базы с сервера с индексом 1 добавляется префикс Test_
-  - К индексу базы с сервера с номером 1 необходимо добавить 11
+## Requirements for new configuration file
+  - DBFriendlyName - no changes required
+  - DB layout should not be changed
+  - Bases from ServerName with index 1 should be changed to ServerName with index 3
+  - For each DB from server with index 1 should be added prefix 'Test_'.
+    Example: 1c_Database12 => Test_1c_Database12
+  - For each DB index from server with index 1 should be added 11.
+    Example: 1c_Database12 => 1c_Database23
 
-## Пример
-Фрагмент оригинальной конфигурации:
+## Example
+Original fragment:
 
 ```conf
-[1C База знаний]
+[1C Data base ABC]
 Connect=Srvr="1СServer1";Ref="DB10";
 ```
 
-должен быть преобразован в:
+should be transformed to:
 
 ```conf
-[1C База знаний]
+[1C Data base ABC]
 Connect=Srvr="1СServer3";Ref="Test_DB21";
 ```
+# Calculate total working time for users from specific subnets
+Requirements: For each user connected from from subnets 10.101.2.0/24 and 10.102.2.0/24 should be calculated total working (connected) time,
+based on LongRead.log
 
-# Расчет рабочего времени для пользователей которые работают из определенных подсетей
-Необходимо посчитать сколько проработал каждый пользователь из подсетей 10.101.2.ХХХ и 10.102.2.ХХХ основываясь на LongRead.log
-  * Пример:
+  * Example:
 ```log
 2020-01-10 03:14:37Z : User 'UserC' from 10.102.2.71 connected
 2020-01-10 03:24:37Z : User 'UserC' from 10.102.2.71 disconnected
 2020-01-10 04:14:37Z : User 'UserC' from 10.102.2.71 connected
 2020-01-10 04:24:37Z : User 'UserC' from 10.102.2.71 disconnected
 ```
-  Результат: 
+  Output: 
 ```powershell
 Username:                 UserC
-Cumulative Working time:  20 minutes
+Total Working time:       20 minutes
 ```
