@@ -1,0 +1,5 @@
+1.  [Создание и модификация объектов](https://github.com/Vector-BCO/PowerShell.Learning/wiki/Objects)
+2.  [Работа с циклами](https://github.com/Vector-BCO/PowerShell.Learning/wiki/Loops)
+3.  [Удаленное выполнение команд](https://github.com/Vector-BCO/PowerShell.Learning/wiki/Remote)
+4.  [Регулярные выражения, поиск, замена и анализ текста](https://github.com/Vector-BCO/PowerShell.Learning/wiki/Regex)
+5.  [Оптимизация и хорошие практики](https://github.com/Vector-BCO/PowerShell.Learning/wiki/Optimization)
