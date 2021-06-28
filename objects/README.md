@@ -1,30 +1,30 @@
 [Goto Topics](https://github.com/Vector-BCO/PowerShell.Learning/wiki)
 
-# Проверка пользователей перед импортом в АД
-    Необходимо в списке пользователей из users.csv проверить необходимые параметры,
-    заполнить недостающие параметры после чего выгрузить пользователей в 2 новых файла:
-    - import_ready.csv 
-    - validation_required.csv
+# User check prior AD import
+Check the required parameters in users list from users.csv,
+fill in missing parameters and then upload users into 2 new files:
+  - import_ready.csv 
+  - validation_required.csv
 
-## Необходимые параметры и их правила формирования
-Обязательные параметры выделены жирным
-  - ***Firstname*** - должно быть не пустым если Lastname пустое. Один из 2х параметров обязателен
-  - ***Lastname*** - должно быть не пустым если Firstname пустое. Один из 2х параметров обязателен
+## Required parameters and generation rules
+Mandatory parameters highlighted in bold
+  - ***FirstName*** - should not be empty if LastName not provided. At least one of two values should be provided.
+  - ***LastName*** - should not be empty if FirstName not provided. At least one of two values should be provided.
   - DayOfBirth 
   - Department
   - Position
   - Phone
   - AdditionalPhone
   - Email
-  - Age - если поле DayOfBirth не пустое, необходимо  высчитать сколько полных лет исполнилось пользователю
-  - **CorpoEmail** - параметр формируется методом склейки SamAccountName корпоративным доменом @ps.learning.com
-  - **SamAccountName** - если поле Email не пустое, то параметр должен формироваться из части до символа "@"
-  Если поле Email пустое, то параметр должен формироваться из Firstname (первые 2 символа) и Lastname с разделением "."
+  - Age - if DayOfBirth is not empty, calculate the user’s full years of age
+  - **CorpoEmail** - parameter generated via merging SamAccountName with @ps.learning.com corporate domain
+  - **SamAccountName** - if Email field is not empty, generate parameter using part before "@" symbol. 
+    If Email field is empty, generate parameter using Firstname (first 2 characters) and Lastname, separated with "."
+  
+At least 4 parameters out of 7 optional DayOfBirth, Department, Position, Phone, AdditionalPhone, Email, Age, should  be filled in for the user to get into import_ready.csv file.
 
-Из 7 необязательных параметров DayOfBirth, Department, Position, Phone, AdditionalPhone, Email, Age должны быть заполнены минимум 4 для того чтобы пользователь попал в файл import_ready.csv
 
-
-# Анализ полученных результатов
-  - Найти сотрудников около пенсионного возраста (63+)
-  - Посчитать какой процент пользователей прошло проверку и попало в import_ready.csv
-  - Найти сотрудников у которых день рожденья будет на следующей неделе, через 2 недели, в течении месяца (3 группы)
+# Output analysis
+  - Find employees of about to retiring age (63+)
+  - Calculate proportion of users that passed the check and included into import_ready.csv
+  - Find employees with a birthday date on next week, in 2 weeks, within a month (3 groups)
