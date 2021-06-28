@@ -1,6 +1,6 @@
-# Пример №1 - 1 sec 712 msec
+# Example №1 - 1 sec 712 msec
 Measure-Command {
-    Write-Host "[$(Get-Date)] Минимум операций - считаем от 0 до 1000000" -ForegroundColor Magenta
+    Write-Host "[$(Get-Date)] Minimum operations - iterate from 0 to 1000000" -ForegroundColor Magenta
     $iteration = 0
     $NeedToStop = $false
     do {
@@ -10,9 +10,9 @@ Measure-Command {
 }
 
 
-# Пример №2 - 11 min 21 sec 590 msec
+# Example №2 - 11 min 21 sec 590 msec
 Measure-Command {
-    Write-Host "[$(Get-Date)] Cчитаем от 0 до 1000000 и выводим значение `$iteration в консоль" -ForegroundColor Magenta
+    Write-Host "[$(Get-Date)] Iterate from 0 to 1000000 and return value of `$iteration to the console" -ForegroundColor Magenta
     $iteration = 0
     $NeedToStop = $false
     do {
@@ -23,9 +23,9 @@ Measure-Command {
 }
 
 
-# Пример №3 - 8 hours 57 min 43 sec 284 msec
+# Example №3 - 8 hours 57 min 43 sec 284 msec
 Measure-Command {
-    Write-Host "[$(Get-Date)] Cчитаем от 0 до 1000000 и дозаписываем результат каждой операции в файл" -ForegroundColor Magenta
+    Write-Host "[$(Get-Date)] Iterate from 0 to 1000000 and appending each value into the file" -ForegroundColor Magenta
     $iteration = 0
     $NeedToStop = $false
     $TestFile1 = New-TemporaryFile #[2]
@@ -38,9 +38,9 @@ Measure-Command {
 }
 
 
-# Пример №4 - > 130 hours
+# Example №4 - > 130 hours
 Measure-Command {
-    Write-Host "[$(Get-Date)] Значения счетчика считывается из файла, к нему добавляется 1 после чего оно записывается в файл (1м раз)"  -ForegroundColor Magenta
+    Write-Host "[$(Get-Date)] Reading value for iteration from the file, iterate value and write it back to the file (1m times)"  -ForegroundColor Magenta
     $iteration = 0
     $NeedToStop = $false
     $TestFile2 = New-TemporaryFile #[3]
