@@ -7,64 +7,64 @@
                     "category":"Variables And Outputs",
                     "questions":[
                         {
-                            "question": "Variable $a будет содержать: \n   $a = 1 \n   $a = write-host 2",
+                            "question": "Variable $a will contain: \n   $a = 1 \n   $a = write-host 2",
                             "answers": [
                                 "1",
                                 "2",
                                 "$null",
-                                "Command return error"
+                                "Command will return error message"
                             ],
-                            "correctAnswer": ""
+                            "correctAnswer": "82-99-07-9E-60-A4-1A-01-B1-70-EA-C4-33-A4-8C-0F"
                         },
                         {
-                            "question": "Переменная $a будет содержать: \n   $a = '1' \n   $a = $a + 2",
+                            "question": "Variable $a will contain: \n   $a = '1' \n   $a = $a + 2",
                             "answers": [
                                 "$null",
                                 "12",
                                 "2",
                                 "1"
                             ],
-                            "correctAnswer": ""
+                            "correctAnswer": "6B-15-1B-4C-B5-82-AC-32-49-AD-60-FC-FB-92-7E-0E"
                         },
                         {
-                            "question": "При выполнении следующего кода: \n   $a = write-output 1 \n   $b = write-host 2 \n   $a \n   $b",
+                            "question": "While executing the following code: \n   $a = write-output 1 \n   $b = write-host 2 \n   $a \n   $b",
                             "answers": [
                                 "Console output will looks like: \n   1  \n   2",
                                 "Console output will looks like: \n   $a \n   $b",
                                 "Console output will looks like: \n   2  \n   1",
                                 "Console output will looks like: \n   $b \n   $a"
                             ],
-                            "correctAnswer": "B8-AF-11-F5-01-42-41-FF-64-04-35-D7-97-ED-C4-75"
+                            "correctAnswer": "E0-E3-C9-13-60-D8-88-9B-11-65-7E-FE-67-D4-6A-07"
                         },
                         {
-                            "question": "При вводе 1 в следующую команду \n   $variable = Read-Host \n Тип переменной будет следующим:",
+                            "question": "Which type of the $variable will be When entering 1 into the command: \n   $variable = Read-Host",
                             "answers": [
                                 "int32",
                                 "bool",
                                 "PSCustomObject",
                                 "string"
                             ],
-                            "correctAnswer": "21-CA-6A-6D-3F-FC-82-12-41-3A-D5-05-CB-81-91-2A"
+                            "correctAnswer": "ED-7F-9D-5C-63-28-B8-BD-39-5E-E2-1A-C4-00-A7-87"
                         },
                         {
-                            "question": "При выполнении следующих команд: \n   $a = 123 \n   $b = \"$a\" \n   $a[-2] \n   $b[-2]",
+                            "question": "While executing the following commands: \n   $a = 123 \n   $b = \"$a\" \n   $a[-2] \n   $b[-2]",
                             "answers": [
                                 "Console output will looks like: \n   2",
                                 "Console output will looks like: \n   123 \n   2",
                                 "Console output will looks like: \n   121  \n   121",
                                 "Console output will looks like: \n   1 \n   1"
                             ],
-                            "correctAnswer": ""
+                            "correctAnswer": "9F-BC-2A-CB-0D-0A-3C-60-20-50-7E-E4-F1-67-BC-EE"
                         },
                         {
-                            "question": "При выполнении следующего фрагмента \n   [int]$variable = $True \n   $variable.GetType() \n Тип переменной будет следующим:",
+                            "question": "While executing the following snippet: \n   [int]$variable = $True \n   $variable.GetType() \nVariable type will be as follows:",
                             "answers": [
                                 "int32",
                                 "bool",
                                 "PSCustomObject",
                                 "string"
                             ],
-                            "correctAnswer": ""
+                            "correctAnswer": "9D-1B-FD-6C-EE-18-FC-2F-16-57-80-11-4C-3C-49-22"
                         }
                     ]
                 },
@@ -72,20 +72,20 @@
                     "category":"Strings",
                     "questions":[
                         {
-                            "question": "Что будет содержать переменная $FullString: \n   $PartialString = \"World\" \n   $FullString = \"Hello $PartialString\"",
+                            "question": "While executing the following snippet: \n   $PartialString = \"World\" \n   $FullString = \"Hello $PartialString\" \nVariable $FullString will contain:",
                             "answers": [
                                 "Hello $PartialString",
                                 "Hello World"
                             ],
-                            "correctAnswer": ""
+                            "correctAnswer": "C1-2D-0F-C2-4D-A6-35-7D-9A-63-9D-08-86-23-71-35"
                         },
                         {
-                            "question": "$FullString будет содержать: \n   $PartialString = 'World' \n   $FullString = 'Hello $PartialString'",
+                            "question": "[Not the same as previous question!] \nWhile executing the following snippet: \n   $PartialString = 'World' \n   $FullString = 'Hello $PartialString' \n Variable $FullString will contain:",
                             "answers": [
                                 "Hello $PartialString",
                                 "Hello World"
                             ],
-                            "correctAnswer": ""
+                            "correctAnswer": "96-19-42-85-C4-E4-AF-AD-F1-D9-8B-23-B4-3D-E1-A5"
                         }
                     ]
                 },
@@ -93,24 +93,24 @@
                     "category":"Regex",
                     "questions":[
                         {
-                            "question": "Какой будет вывод следующей команды \n   \"Hello world\" -match 'hell'",
+                            "question": "What is an output of the following command: \n   \"Hello world\" -match 'hell'",
                             "answers": [
                                 "Hello",
                                 "Hello world",
                                 "true",
                                 "false"
                             ],
-                            "correctAnswer": ""
+                            "correctAnswer": "D0-E8-4C-02-59-93-09-34-6A-94-21-71-25-70-4F-74"
                         },
                         {
-                            "question": "Какой будет вывод следующей команды \n   \"Hello world\" -replace 'lo|wo'",
+                            "question": "What is an output of the following command: \n   \"Hello world\" -replace 'lo|wo'",
                             "answers": [
                                 "Hello world",
                                 "Hel rld",
                                 "true",
                                 "Helwo lorld"
                             ],
-                            "correctAnswer": ""
+                            "correctAnswer": "57-A4-ED-AD-AF-0D-0D-77-90-FC-EE-71-4F-3E-EF-E2"
                         }
                     ]
                 },
@@ -118,34 +118,34 @@
                     "category":"Logical",
                     "questions":[
                         {
-                            "question": "Какой будет вывод следующей команды: \n   0 -gt $true",
+                            "question": "What is an output of the following command: \n   0 -gt $true",
                             "answers": [
                                 "0",
                                 "false",
                                 "1",
                                 "true"
                             ],
-                            "correctAnswer": ""
+                            "correctAnswer": "94-B5-9C-D8-51-63-EA-6B-BA-0E-BE-C3-15-4A-65-B3"
                         },
                         {
-                            "question": "Какой будет вывод следующей команды: \n   5 -in @(1..10)",
+                            "question": "What is an output of the following command: \n   5 -in @(1..10)",
                             "answers": [
                                 "0",
                                 "false",
                                 "1",
                                 "true"
                             ],
-                            "correctAnswer": ""
+                            "correctAnswer": "11-A8-13-41-AD-3C-FE-4A-7C-4F-14-BC-A4-00-8C-96"
                         },
                         {
-                            "question": "Что будет делать следующая команда \n   [Int](Get-Date).DayOfWeek -in @(6..9)",
+                            "question": "What is an output of the following command: \n   [Int](Get-Date).DayOfWeek -in @(6..9)",
                             "answers": [
-                                "Команда вернет дату 1989-07-06",
-                                "Всегда результат будет идентичным и равным False",
-                                "Если в момент выполнения команды будет 6, 7, 8 или 9 число то команда вернет True, в другом случае будет False",
-                                "Команда вернет True в субботу и воскресенье, и False в остальные дни недели"
+                                "Command will return date '1678-09-01'",
+                                "The result will always be $False",
+                                "If at the time of command execution there is a 6, 7, 8 or 9 number, then the command will return True, otherwise it will be False",
+                                "The command will return True on Saturday, and False on the rest of the week"
                             ],
-                            "correctAnswer": ""
+                            "correctAnswer": "EC-AC-AD-86-A8-53-BB-47-4E-04-B8-92-34-22-69-45"
                         }
                     ]
                 },
@@ -153,45 +153,45 @@
                     "category":"Functions",
                     "questions":[
                         {
-                            "question": "Что появится на экране при выполнeнии следующей команды: \n   function new-function { \n      param($string) \n     \"~~ $string ~~\" \n   } \n   $string = 'ABC' \n   new-function \"DEF\"",
+                            "question": "What will appear on the screen when the following command is executed: \n   function new-function { \n      param($string) \n     \"~~ $string ~~\" \n   } \n   $string = 'ABC' \n   new-function \"DEF\"",
                             "answers": [
                                 "ABC",
                                 "DEF",
                                 "~~ DEF ~~",
                                 "$string"
                             ],
-                            "correctAnswer": ""
+                            "correctAnswer": "E1-78-1B-78-3B-8E-49-BA-FE-5C-1C-16-CA-83-DA-65"
                         },
                         {
-                            "question": "При выполнении следующего фрагмента кода \n $ErrorActionPreference = 'Stop' \n try { \n     throw 'Custom Error Message' \n     $a = 'ABCD' \n } catch { \n    $b = $_ \n }",
+                            "question": "When executing the following code snippet \n   $ErrorActionPreference = 'Stop' \n   try { \n      throw 'Custom Error Message' \n      $a = 'ABCD' \n   } catch { \n      $b = $_ \n   }",
                             "answers": [
-                                "Переменная $a будет пустая ($null) \n    Переменная $b будет содержать ошибку ('Custom Error Message') ",
-                                "Переменная $a будет содержать строку ('ABCD') \n    Переменная $b будет пустая ($null)",
+                                "Variable $a will be empty ($null) \n    Variable $b will contain an error ('Custom Error Message')",
+                                "Variable $a will contain a string ('ABCD') \n    Variable $b will be empty ($null)",
                                 "Both variables $a and $b would contain string ('ABCD')",
                                 "Both variables $a and $b would be empty ($null)"
                             ],
-                            "correctAnswer": ""
+                            "correctAnswer": "5C-A7-81-1A-61-01-24-13-DB-B5-F9-8F-2F-50-E7-EA"
                         },
                         {
-                            "question": "Что появится в консоли при выполнении следующего фрагмента кода \n foreach ($i in @(1..3)){if($i -eq 2){continue}else{$i}}",
+                            "question": "What will appear in the console when the following code snippet is executed \n   foreach ($i in @(1..3)){ \n      if($i -eq 2){\n         continue\n      }else{\n         $i\n      }\n   }",
                             "answers": [
                                 "1",
                                 "1 \n    2",
                                 "1 \n    2 \n    3",
                                 "1 \n    3"
                             ],
-                            "correctAnswer": ""
+                            "correctAnswer": "49-AC-DA-1D-C6-85-34-DC-31-0D-B3-96-C6-8D-F7-79"
                         }
                         ,
                         {
-                            "question": "Что будет содержать переменная $unsecureString при выполнении следующего фрагмента кода \n   $SecureString = ConvertTo-SecureString -String 'Password' -Force -AsPlainText \n   $unsecureString = ConvertFrom-SecureString $SecureString",
+                            "question": "What $unsecureString variable will contain when executing the following code snippet \n   $SecureString = ConvertTo-SecureString -String 'Password' -Force -AsPlainText \n   $unsecureString = ConvertFrom-SecureString $SecureString",
                             "answers": [
-                                "Расшифрованную строку равную 'Password'",
-                                "Объект PSCredential, который можно использовать в Invoke-Command и Enter-PSSession ",
-                                "Пароль который можно будет использовать для доступа к ПК на котором пароль был сгенерирован",
-                                "Шифрованную последовательность которую можно сконвертировать в SecureString"
+                                "Decrypted string equal to 'Password'",
+                                "PSCredential object, which can be used in Invoke-Command or Enter-PSSession",
+                                "Password that can be used to access PC on which this password was generated",
+                                "Encrypted sequence that can be converted to SecureString"
                             ],
-                            "correctAnswer": ""
+                            "correctAnswer": "C6-96-6D-8E-5B-80-A9-1B-57-79-47-AB-FC-91-9D-0F"
                         }
                     ]
                 },
@@ -199,34 +199,34 @@
                     "category":"Files",
                     "questions":[
                         {
-                            "question": "Что будет отображено в консоли при выполнении следующего фрагмента: \n   $TestFile = New-TemporaryFile \n   New-Item -Force -ItemType File -Path $TestFile \n   1 | Out-File $TestFile \n   2 | Out-File $TestFile \n   Get-Content $TestFile",
+                            "question": "What will be displayed in the console when the next snippet is executed: \n   $TestFile = New-TemporaryFile \n   New-Item -Force -ItemType File -Path $TestFile \n   1 | Out-File $TestFile \n   2 | Out-File $TestFile \n   Get-Content $TestFile",
                             "answers": [
                                 "12",
                                 "1",
                                 "2",
                                 "1 \n    2"
                             ],
-                            "correctAnswer": ""
+                            "correctAnswer": "E4-2D-24-9B-F7-AF-CE-68-BF-4F-80-D5-8A-0B-21-8A"
                         },
                         {
-                            "question": "Что будет отображено в консоли при выполнении следующего фрагмента: \n   $TestFile = New-TemporaryFile \n   New-Item -Force -ItemType File -Path $TestFile \n   1 | Out-File $TestFile \n   2 | Out-File $TestFile \n   $Content = Get-Content $TestFile | Select -First 1 \n   $Content + 3",
+                            "question": "What will be displayed in the console when the next snippet is executed: \n   $TestFile = New-TemporaryFile \n   New-Item -Force -ItemType File -Path $TestFile \n   1 | Out-File $TestFile \n   2 | Out-File $TestFile \n   $Content = Get-Content $TestFile | Select -First 1 \n   $Content + 3",
                             "answers": [
                                 "13",
                                 "4",
                                 "23",
                                 "5"
                             ],
-                            "correctAnswer": ""
+                            "correctAnswer": "F0-85-0C-6D-0A-46-AF-A8-F8-D6-BE-66-6E-16-0B-75"
                         },
                         {
-                            "question": "Какие варианты возможно получить в консоли при выполнении следующего фрагмента: \n $randomValue = Get-Random -InputObject @($true, $false) \n if ($randomValue){ \n     1 \n } elseif ($randomValue -eq $false){ \n     2 \n } else { \n     3 \n }",
+                            "question": "What options can be obtained in the console when executing the following snippet: \n   $randomValue = Get-Random -InputObject @($true, $false) \n   if ($randomValue){ \n      1 \n   } elseif ($randomValue -eq $false){ \n      2 \n   } else { \n      3 \n   }",
                             "answers": [
                                 "1, 2, 3",
                                 "1 and 2",
                                 "2 and 3",
                                 "3"
                             ],
-                            "correctAnswer": ""
+                            "correctAnswer": "B2-C4-E5-DC-8E-BE-F8-F9-5E-BA-F4-59-C8-69-A1-09"
                         }
                     ]
                 },
@@ -234,14 +234,14 @@
                     "category":"Optimization",
                     "questions":[
                         {
-                            "question": "Какой будет результат выполнения следующего фрагмента кода: \n   $FunctionAResult = Measure-Command {1..1000000 | foreach{$_}} \n   $FunctionBResult = Measure-Command {$i = 0 ; 1..1000000 | foreach{$a = $i+$_ ; Write-Output $a}}  \n   $FunctionAResult -ge $FunctionBResult \n   $FunctionAResult -eq $FunctionBResult \n   $FunctionAResult -le $FunctionBResult",
+                            "question": "What will be the result of executing the following code snippet: \n   $FunctionAResult = Measure-Command {1..1000000 | foreach{$_}} \n   $FunctionBResult = Measure-Command {$i = 0 ; 1..1000000 | foreach{$a = $i+$_ ; Write-Output $a}}  \n   $FunctionAResult -ge $FunctionBResult \n   $FunctionAResult -eq $FunctionBResult \n   $FunctionAResult -le $FunctionBResult",
                             "answers": [
                                 "False \n    False \n    True",
                                 "True \n    True \n    True",
                                 "True \n    True \n    False",
                                 "Error"
                             ],
-                            "correctAnswer": ""
+                            "correctAnswer": "4C-AA-05-16-20-04-94-DD-E7-B4-6B-CE-74-A9-93-0F"
                         }
                     ]
                 }
@@ -372,7 +372,7 @@
                                 "1",
                                 "true"
                             ],
-                            "correctAnswer": "F7-5F-F6-F7-95-96-0F-CA-A8-B4-71-2B-2E-1A-2A-B9"
+                            "correctAnswer": ""
                         },
                         {
                             "question": "Какой будет вывод следующей команды: \n   5 -in @(1..10)",
