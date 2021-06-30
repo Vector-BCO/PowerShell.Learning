@@ -6,7 +6,7 @@ password.
 If the passwords do not match, request the Password-Confirmation pair again. 
 If the pair does not match, re-request the passwords 3 times.
 
-## Пример
+## Example
 ```PowerShell
 Enter Password: *********
 Re-Enter Password: *********
