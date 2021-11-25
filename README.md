@@ -1,6 +1,6 @@
 # PowerShell Beginner (EN\PL)
 
-## Date and evennt plan
+## Date and event plan
 ### Part 1 2021.06.29 12:00 - 15:00 Kraków time
     0) Few words about author
     1) Short Powershell introduction
